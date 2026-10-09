@@ -1,0 +1,35 @@
+.sym-picker {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: var(--space-2);
+}
+
+.sym-chip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: all var(--transition);
+  font-family: inherit;
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-text);
+  text-align: left;
+}
+.sym-chip:hover {
+  border-color: var(--color-primary);
+  background: rgba(255, 255, 255, 0.9);
+  transform: translateY(-1px);
+}
+.sym-chip--on {
+  background: #F3F0FF;
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+.sym-chip__icon { font-size: 16px; line-height: 1; }

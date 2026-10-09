@@ -1,0 +1,11 @@
+.badge {
+  display: inline-block;
+  padding: 3px 12px;
+  font-size: var(--text-xs);
+  font-weight: 500;
+  border-radius: var(--radius-pill);
+}
+.badge--default { background: #F3F4F6; color: var(--color-text); }
+.badge--accent  { background: #EDE9FE; color: var(--color-accent); }
+.badge--success { background: #D1FAE5; color: #065F46; }
+.badge--warning { background: #FEF3C7; color: #92400E; }

@@ -1,0 +1,71 @@
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-field__label {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.form-field__input-wrap {
+  position: relative;
+}
+
+.form-field__input {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.85);
+  font-size: var(--text-sm);
+  color: var(--color-text);
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.form-field__input:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.12);
+}
+
+.form-field__input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.form-field__input--error { border-color: var(--color-danger); }
+.form-field__input--error:focus {
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.15);
+}
+
+.form-field__toggle {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 4px;
+  line-height: 1;
+  opacity: 0.7;
+  transition: opacity var(--transition);
+}
+.form-field__toggle:hover { opacity: 1; }
+
+.form-field__input-wrap:has(.form-field__toggle) .form-field__input {
+  padding-right: 40px;
+}
+
+.form-field__error {
+  font-size: var(--text-xs);
+  color: var(--color-danger);
+}
+.form-field__hint {
+  font-size: var(--text-xs);
+  color: var(--color-muted);
+}

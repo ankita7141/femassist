@@ -1,0 +1,43 @@
+.onb-layout {
+  min-height: 100vh;
+  padding: var(--space-6) var(--space-4);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: linear-gradient(180deg, #FFF5F9 0%, #FAFAFA 100%);
+}
+.onb-layout__container {
+  width: 100%;
+  max-width: 580px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  padding-top: var(--space-5);
+}
+.onb-layout__progress-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+.onb-layout__step-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--text-xs);
+  font-weight: 500;
+  color: var(--color-muted);
+  padding: 0 var(--space-2);
+}
+.onb-layout__progress-bar {
+  height: 6px;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  border-radius: var(--radius-pill);
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(124, 58, 237, 0.06);
+}
+.onb-layout__progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+  border-radius: var(--radius-pill);
+  transition: width 0.4s ease;
+}
